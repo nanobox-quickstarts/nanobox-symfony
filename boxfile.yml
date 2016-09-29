@@ -1,0 +1,30 @@
+code.build:
+  engine: php
+  config:
+    runtime: php-7.0
+    document_root: web
+    extensions:
+      # required by symfony installer
+      - zlib
+      - ctype
+      - iconv
+      - session
+      - tokenizer
+      - simplexml
+      # required by Symfony
+      - pdo
+      # required by composer
+      - phar
+      - filter
+      - json
+      - hash
+      - zip
+      - dom
+
+web.symfony:
+  start:
+    fpm: start-php
+    apache: start-apache
+  log_watch:
+    php[access]: /data/var/log/php/access.log
+    php[error]: /data/var/log/php/php_error.log

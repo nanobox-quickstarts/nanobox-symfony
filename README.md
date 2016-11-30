@@ -1,8 +1,8 @@
-![Laravel from scratch](https://guides.nanobox.io/assets/quickstart-icons/laravel.png)
+![Symfony from scratch](https://guides.nanobox.io/assets/quickstart-icons/symfony.png)
 
-# Laravel from scratch
+# Symfony from scratch
 
-Run a Laravel app locally, install nothing besides nanobox. 
+Run a Symfony app locally, install nothing besides nanobox.
 
 <a href="https://nanobox.io/download"><img src="https://guides.nanobox.io/assets/quickstart-icons/download.png" /></a>
 
@@ -11,27 +11,27 @@ Run a Laravel app locally, install nothing besides nanobox.
 
 ```bash
 # clone the code
-git clone https://github.com/nanobox-quickstarts/nanobox-laravel.git
+git clone https://github.com/nanobox-quickstarts/nanobox-symfony.git
 
-# cd into the laravel app
-cd nanobox-laravel
+# cd into the symfony app
+cd nanobox-symfony
 ```
 
 ## Run the app
 
 ```bash
-# Run laravel as you would normally, with Nanobox
-nanobox run php artisan serve --host 0.0.0.0
+# Run symfony as you would normally, with Nanobox
+nanobox run php bin/console server:run 0.0.0.0
 ```
 
 ## Check it out
 
 ```bash
 # Add a convenient way to access your app from the browser
-nanobox dns add local laravel.dev
+nanobox dns add local symfony.dev
 ```
 
-Visit your app at <a href="http://laravel.dev:8000" target="\_blank">laravel.dev:8000</a>
+Visit your app at <a href="http://symfony.dev:8000" target="\_blank">symfony.dev:8000</a>
 
 ## Explore
 
@@ -41,7 +41,7 @@ With Nanobox, you don't have to have anything installed on your machine to run y
 # drop into a Nanobox console
 nanobox run
 
-# where laravel is installed,
+# where symfony is installed,
 php -v
 
 # your packages are available,
@@ -52,6 +52,6 @@ ls
 ```
 
 ## Now What?
-For more details about running laravel apps with nanobox visit [guides.nanobox.io/php/laravel/](https://guides.nanobox.io/php/laravel/)
+For more details about running symfony apps with nanobox visit [guides.nanobox.io/php/symfony/](https://guides.nanobox.io/php/symfony/)
 
 <a href="https://nanobox.io"><img src="https://guides.nanobox.io/assets/quickstart-icons/footer.png" /></a>

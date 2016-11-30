@@ -1,30 +1,60 @@
-code.build:
+run.config:
+  # install php and associated runtimes
   engine: php
-  config:
-    runtime: php-7.0
-    document_root: web
-    extensions:
-      # required by symfony installer
-      - zlib
-      - ctype
-      - iconv
-      - session
-      - tokenizer
-      - simplexml
-      # required by Symfony
-      - pdo
-      # required by composer
-      - phar
-      - filter
-      - json
-      - hash
-      - zip
-      - dom
 
-web.symfony:
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
+
+    # sets the php version to 7.0
+    runtime: php-7.0
+
+    # use nginx
+    webserver: nginx
+
+    # public directory
+    document_root: web
+
+    # index
+    nginx_default_gateway: app.php
+
+    # enables php extensions
+    extensions:
+      - ctype
+      - dom
+      - iconv
+      - mbstring
+      - pdo
+      - pdo_mysql
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
+
+#
+deploy.config:
+  before_live:
+    web.main:
+      - php bin/console doctrine:schema:update --force
+
+# add a MySQL database
+data.db:
+  image: nanobox/mysql
+
+#
+web.main:
   start:
+    nginx: start-nginx
     fpm: start-php
-    apache: start-apache
+
+  # add writable dirs to your web component
+  writable_dirs:
+    - var
+
+  # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    php[access]: /data/var/log/php/access.log
+    nginx[access]: /data/var/log/nginx/access.log
+    nginx[error]: /data/var/log/nginx/error.log
     php[error]: /data/var/log/php/php_error.log
+    php[fpm]: /data/var/log/php/php_fpm.log
+    symfony[error]: /app/storage/logs/symfony.log

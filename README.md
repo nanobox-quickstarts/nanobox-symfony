@@ -1,26 +1,57 @@
-# Symfony with Nanobox
-This is the companion application for the [Symfony: Getting Started](https://guides.nanobox.io/symfony/) guide on [guides.nanobox.io](https://guides.nanobox.io) and is pre-configured and ready to run with [Nanobox](https://nanobox.io/)!
+![Laravel from scratch](https://guides.nanobox.io/assets/quickstart-icons/laravel.png)
 
-## Up and Running
+# Laravel from scratch
 
-``` bash
+Run a Laravel app locally, install nothing besides nanobox. 
+
+<a href="https://nanobox.io/download"><img src="https://guides.nanobox.io/assets/quickstart-icons/download.png" /></a>
+
+
+## Clone the repo
+
+```bash
 # clone the code
-git clone --recursive https://github.com/nanobox-quickstarts/nanobox-symfony.git
+git clone https://github.com/nanobox-quickstarts/nanobox-laravel.git
 
-# cd into the symfony app
-cd nanobox-symfony
-
-# build the runtime
-nanobox build
-
-# add a convenient way to access your app from the browser
-nanobox dev dns add symfony.nanobox.dev
-
-# start PHP-FPM & Apache
-nanobox dev run
+# cd into the laravel app
+cd nanobox-laravel
 ```
 
-Visit the app from your favorite browser at: `symfony.nanobox.dev:8080`
+## Run the app
+
+```bash
+# Run laravel as you would normally, with Nanobox
+nanobox run php artisan serve --host 0.0.0.0
+```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local laravel.dev
+```
+
+Visit your app at <a href="http://laravel.dev:8000" target="\_blank">laravel.dev:8000</a>
+
+## Explore
+
+With Nanobox, you don't have to have anything installed on your machine to run your app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where laravel is installed,
+php -v
+
+# your packages are available,
+composer show
+
+# and your code is mounted
+ls
+```
 
 ## Now What?
-For more details about how this works or for more advanced topics related to running Symfony applications with Nanobox visit [guides.nanobox.io/symfony/](https://guides.nanobox.io/symfony/).
+For more details about running laravel apps with nanobox visit [guides.nanobox.io/php/laravel/](https://guides.nanobox.io/php/laravel/)
+
+<a href="https://nanobox.io"><img src="https://guides.nanobox.io/assets/quickstart-icons/footer.png" /></a>

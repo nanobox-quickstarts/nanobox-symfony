@@ -15,7 +15,7 @@ run.config:
     document_root: web
 
     # index
-    nginx_default_gateway: app.php
+    nginx_default_gateway: app_dev.php
 
     # enables php extensions
     extensions:

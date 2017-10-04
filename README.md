@@ -2,7 +2,7 @@
 
 # Symfony from scratch
 
-Run a Symfony app locally, install nothing besides nanobox.
+Run a Symfony app locally, install nothing besides Nanobox.
 
 <a href="https://nanobox.io/download"><img src="https://guides.nanobox.io/assets/quickstart-icons/download.png" /></a>
 
@@ -13,7 +13,7 @@ Run a Symfony app locally, install nothing besides nanobox.
 # clone the code
 git clone https://github.com/nanobox-quickstarts/nanobox-symfony.git
 
-# cd into the symfony app
+# cd into the Symfony app
 cd nanobox-symfony
 ```
 
@@ -23,7 +23,7 @@ cd nanobox-symfony
 # Add a convenient way to access your app from the browser
 nanobox dns add local symfony.dev
 
-# Run symfony as you would normally, with Nanobox
+# Run Symfony as you would normally, with Nanobox
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
@@ -39,7 +39,7 @@ With Nanobox, you don't have to have anything installed on your machine to run y
 # drop into a Nanobox console
 nanobox run
 
-# where symfony is installed,
+# where Symfony is installed,
 php -v
 
 # your packages are available,
@@ -50,6 +50,6 @@ ls
 ```
 
 ## Now What?
-For more details about running symfony apps with nanobox visit [guides.nanobox.io/php/symfony/](https://guides.nanobox.io/php/symfony/)
+For more details about running Symfony apps with Nanobox visit [guides.nanobox.io/php/symfony/](https://guides.nanobox.io/php/symfony/)
 
 <a href="https://nanobox.io"><img src="https://guides.nanobox.io/assets/quickstart-icons/footer.png" /></a>
